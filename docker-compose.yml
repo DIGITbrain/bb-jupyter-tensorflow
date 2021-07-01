@@ -1,0 +1,12 @@
+version: "3"
+services:
+  tensorflow:
+    image: digitbrain/bb-jupyter-tensorflow:latest
+    container_name: tensorflow
+    restart: always
+    ports:
+      - 8888:8888
+    environment:
+      - JUPYTER_PASSWORD=jupyterlab
+    volumes:
+      - ./tensorflow/data:/tensorflow
