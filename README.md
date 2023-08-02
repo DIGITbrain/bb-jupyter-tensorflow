@@ -14,7 +14,7 @@ Apache License 2.0
 
 ## Version
 
-2.5.0
+2.x
 
 ## Description
 

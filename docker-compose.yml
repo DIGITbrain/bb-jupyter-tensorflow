@@ -1,11 +1,16 @@
 version: "3"
 services:
   tensorflow:
-    image: digitbrain/bb-jupyter-tensorflow:latest
+    image: dbs-container-repo.emgora.eu/bb-jupyter-tensorflow:latest
     container_name: tensorflow
     restart: always
     ports:
-      - 8888:8888
+      # Basically the same description just shorter
+      # - 8888:8888
+    - target: '8888'
+      published: '8888'
+      protocol: tcp
+      mode: host
     environment:
       - JUPYTER_PASSWORD=jupyterlab
     volumes:
